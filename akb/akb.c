@@ -18,6 +18,8 @@ BYTE addsb(BYTE x, int a)
 const CLSID CLSID_WbemLocator = { 0x4590F811, 0x1D3A, 0x11D0, { 0x89, 0x1F, 0x00, 0xAA, 0x00, 0x4B, 0x2E, 0x24 } };
 const IID IID_IWbemLocator = { 0xDC12A687, 0x737F, 0x11CF, { 0x88, 0x4D, 0x00, 0xAA, 0x00, 0x4B, 0x2E, 0x24 } };
 
+
+
 enum
 {
 	VID_APPLE = 0x05AC,
@@ -691,7 +693,7 @@ static LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 			Global.hHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, hInstance, 0);
 
 			if (!SpecialKey_Prepare())
-				Shell_NotifyIcon(NIM_MODIFY, &nid);
+				;//Shell_NotifyIcon(NIM_MODIFY, &nid);
 		}
 		break;
 	case WM_DESTROY:
